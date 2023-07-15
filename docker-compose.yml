@@ -18,3 +18,11 @@ services:
         volumes:
             - ~/.flowise:/root/.flowise
         command: /bin/sh -c "sleep 3; flowise start"
+    sqlite:
+        image: sqlite
+        restart: always
+        volumes:
+          - ./data:/data
+        environment:
+          - SQLITE_DATABASE=/data/flowise.db
+
