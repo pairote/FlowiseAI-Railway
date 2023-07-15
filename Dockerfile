@@ -10,6 +10,9 @@ RUN apk add --no-cache build-base cairo-dev pango-dev
 # Install Chromium
 RUN apk add --no-cache chromium
 
+# Install SQLite
+RUN apk add --no-cache sqlite
+
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
